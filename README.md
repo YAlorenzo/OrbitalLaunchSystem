@@ -1,10 +1,5 @@
 # Orbital Launch System
 
-![Java](https://img.shields.io/badge/Java-21-orange.svg)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![JUnit](https://img.shields.io/badge/JUnit-5-green.svg)
-
 ## Overview
 
 **Orbital Launch System** is a console-based Java application that simulates orbital launch missions and calculates rocket performance metrics. The system allows users to configure mission parameters (target orbit, payload mass, fuel mass) and determines whether a rocket configuration can successfully reach the specified orbital destination based on delta-V calculations.
@@ -78,24 +73,6 @@ OrbitalLaunchSystem/
 
 - **Input Validation**: Validates user inputs (payload mass, fuel mass) to prevent negative values
 
-## Prerequisites
-
-Before running the application, ensure you have the following installed:
-
-| Requirement | Version | Description |
-|------------|---------|-------------|
-| **JDK** | 21 or higher | Java Development Kit (LTS recommended) |
-| **Java Runtime** | 21 or higher | JRE for running the application |
-| **IDE** (Optional) | IntelliJ IDEA / Eclipse / VS Code | For development and debugging |
-
-### Verifying Installation
-
-```bash
-# Check Java version
-java -version
-
-# Should output: openjdk version "21.x.x" or similar
-```
 
 ## Configuration
 
@@ -113,27 +90,6 @@ public static final int STRUCTURAL_MASS = 1000;
 public static final double ENGINE_EFFICIENCY = 3070.0;
 ```
 
-## Running the Application
-
-### Local Execution (IDE)
-
-1. **IntelliJ IDEA**:
-   - Open the project in IntelliJ IDEA
-   - Navigate to `src/Main.java`
-   - Right-click and select **Run 'Main.main()'**
-   - Or use the keyboard shortcut: `Shift + F10`
-
-2. **Command Line**:
-   ```bash
-   # Navigate to project root
-   cd OrbitalLaunchSystem
-   
-   # Compile the source files
-   javac -d out src/Main.java src/controller/*.java src/model/*.java src/view/*.java
-   
-   # Run the application
-   java -cp out Main
-   ```
 
 ### Execution Flow
 
@@ -173,21 +129,6 @@ Message: Orbit insertion complete. Welcome to Low Earth Orbit (LEO)!
 
 **The primary educational goal of this project was to learn and implement unit testing practices.** The test suite demonstrates fundamental testing concepts including test case design, assertion usage, and validation of business logic correctness.
 
-### Running Tests
-
-The project includes unit tests using JUnit 5. To run tests:
-
-**IntelliJ IDEA**:
-- Right-click on `test/model/RocketDataTest.java`
-- Select **Run 'RocketDataTest'**
-
-**Command Line**:
-```bash
-# Ensure JUnit 5 is in classpath
-javac -cp "path/to/junit-platform-console-standalone-1.x.x.jar" -d out test/model/RocketDataTest.java src/model/RocketData.java
-
-java -cp "out:path/to/junit-platform-console-standalone-1.x.x.jar" org.junit.platform.console.ConsoleLauncher --class-path out --select-class RocketDataTest
-```
 
 ### Test Coverage
 
@@ -239,34 +180,6 @@ The application includes input validation:
 - **Negative Fuel Mass**: Throws `IllegalArgumentException` with message: "The fuel mass cannot be negative!"
 - **Invalid Mission Selection**: Defaults to Low Earth Orbit (LEO) with a warning message
 
-## Development
-
-### Building from Source
-
-```bash
-# Compile all source files
-javac -d out src/**/*.java
-
-# Compile with specific encoding (if needed)
-javac -encoding UTF-8 -d out src/**/*.java
-```
-
-### Code Style
-
-- Package naming: lowercase (e.g., `controller`, `model`, `view`)
-- Class naming: PascalCase (e.g., `RocketData`, `LaunchDirector`)
-- Method naming: camelCase (e.g., `calculateDeltaV`, `canReachOrbit`)
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contributing
-
-Contributions are welcome! Please ensure:
-- Code follows existing style conventions
-- New features include appropriate unit tests
-- All tests pass before submitting
 
 ## Author
 
@@ -279,7 +192,4 @@ Developed as an educational project with the **primary learning objective of mas
 - Rocket physics calculations
 - Java console application development
 
----
-
-**Note**: This is a simulation application for educational purposes. Real rocket launch calculations require significantly more complex physics models and safety considerations.
 
