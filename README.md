@@ -20,19 +20,6 @@ The application follows a **Layered Architecture (MVC Pattern)**:
 - **LaunchDirector**: Controls the launch sequence workflow and mission selection logic
 - **MissionControlConsole**: Provides interactive console interface for user input and result display
 
-## Technology Stack
-
-### Core
-- **Java**: 21 (LTS)
-- **Build System**: IntelliJ IDEA Module (Standard Java Project)
-
-### Testing
-- **JUnit 5** (Jupiter): Unit testing framework
-- **Assertions**: JUnit 5 assertion API
-
-### Development Tools
-- **IDE**: IntelliJ IDEA compatible
-- **Java Compiler**: Standard javac (JDK 21)
 
 ## Project Structure
 
